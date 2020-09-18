@@ -1,0 +1,234 @@
+Check consistency of the given heuristic.
+-----
+Parent city Austin with heuristic 182
+Child city Charlotte with heuristic 929
+Distance between these two cities: 1200
+-----
+-----
+Parent city Austin with heuristic 182
+Child city Los Angeles with heuristic 1100
+Distance between these two cities: 1377
+-----
+-----
+Parent city Austin with heuristic 182
+Child city Boston with heuristic 1551
+Distance between these two cities: 1963
+-----
+-----
+Parent city Austin with heuristic 182
+Child city Dallas with heuristic 0
+Distance between these two cities: 195
+-----
+-----
+Parent city Charlotte with heuristic 929
+Child city Austin with heuristic 182
+Distance between these two cities: 1200
+-----
+-----
+Parent city Charlotte with heuristic 929
+Child city New York with heuristic 1368
+Distance between these two cities: 634
+-----
+-----
+Parent city San Francisco with heuristic 1230
+Child city Los Angeles with heuristic 1100
+Distance between these two cities: 383
+-----
+-----
+Parent city San Francisco with heuristic 1230
+Child city Seattle with heuristic 1670
+Distance between these two cities: 807
+-----
+-----
+Parent city San Francisco with heuristic 1230
+Child city Bakersville with heuristic 1282
+Distance between these two cities: 283
+-----
+-----
+Parent city San Francisco with heuristic 1230
+Child city Boston with heuristic 1551
+Distance between these two cities: 3095
+-----
+-----
+Parent city Los Angeles with heuristic 1100
+Child city Austin with heuristic 182
+Distance between these two cities: 1377
+-----
+-----
+Parent city Los Angeles with heuristic 1100
+Child city San Francisco with heuristic 1230
+Distance between these two cities: 383
+-----
+-----
+Parent city Los Angeles with heuristic 1100
+Child city Bakersville with heuristic 1282
+Distance between these two cities: 153
+-----
+-----
+Parent city New York with heuristic 1368
+Child city Charlotte with heuristic 929
+Distance between these two cities: 634
+-----
+-----
+Parent city New York with heuristic 1368
+Child city Boston with heuristic 1551
+Distance between these two cities: 225
+-----
+-----
+Parent city New York with heuristic 1368
+Child city Dallas with heuristic 0
+Distance between these two cities: 1548
+-----
+-----
+Parent city Chicago with heuristic 800
+Child city Seattle with heuristic 1670
+Distance between these two cities: 2064
+-----
+-----
+Parent city Chicago with heuristic 800
+Child city Santa Fe with heuristic 560
+Distance between these two cities: 1272
+-----
+-----
+Parent city Chicago with heuristic 800
+Child city Boston with heuristic 1551
+Distance between these two cities: 983
+-----
+-----
+Parent city Seattle with heuristic 1670
+Child city San Francisco with heuristic 1230
+Distance between these two cities: 807
+-----
+-----
+Parent city Seattle with heuristic 1670
+Child city Chicago with heuristic 800
+Distance between these two cities: 2064
+-----
+-----
+Parent city Seattle with heuristic 1670
+Child city Santa Fe with heuristic 560
+Distance between these two cities: 1463
+-----
+-----
+Parent city Santa Fe with heuristic 560
+Child city Chicago with heuristic 800
+Distance between these two cities: 1272
+-----
+-----
+Parent city Santa Fe with heuristic 560
+Child city Seattle with heuristic 1670
+Distance between these two cities: 1463
+-----
+-----
+Parent city Santa Fe with heuristic 560
+Child city Bakersville with heuristic 1282
+Distance between these two cities: 864
+-----
+-----
+Parent city Santa Fe with heuristic 560
+Child city Dallas with heuristic 0
+Distance between these two cities: 640
+-----
+-----
+Parent city Bakersville with heuristic 1282
+Child city San Francisco with heuristic 1230
+Distance between these two cities: 283
+-----
+-----
+Parent city Bakersville with heuristic 1282
+Child city Los Angeles with heuristic 1100
+Distance between these two cities: 153
+This is not consistent
+-----
+Heuristic is not consistent.
+
+A* algorithm
+
+Initial Node: Seattle
+Iteration#1
+Current Node: Seattle
+Evaluation function(Seattle)=1670
+Explored:
+['Seattle']
+Frontier:
+[(Santa Fe, 2023), (San Francisco, 2037), (Chicago, 2864)]
+Iteration#2
+Current Node: Santa Fe
+Evaluation function(Santa Fe)=2023
+Explored:
+['Seattle', 'Santa Fe']
+Frontier:
+[(San Francisco, 2037), (Dallas, 2103), (Chicago, 2864), (Bakersville, 3609)]
+Iteration#3
+Current Node: San Francisco
+Evaluation function(San Francisco)=2037
+Explored:
+['Seattle', 'Santa Fe', 'San Francisco']
+Frontier:
+[(Dallas, 2103), (Los Angeles, 2290), (Bakersville, 2372), (Chicago, 2864), (Boston, 5453)]
+Iteration#4
+Current Node: Dallas
+Found the goal node
+Reached goal state
+Path to the goal from the initial state
+Seattle
+Santa Fe
+Dallas
+-----------------------
+
+None
+
+RBFS algorithm
+
+f_limit:inf
+best:2023
+alternative:2037
+current_city:Seattle
+next_city:Santa Fe
+
+
+f_limit:2037
+best:2103
+alternative:3535
+current_city:Santa Fe
+next_city: Fail
+
+
+f_limit:inf
+best:2037
+alternative:2103
+current_city:Seattle
+next_city:San Francisco
+
+
+f_limit:2103
+best:2290
+alternative:2372
+current_city:San Francisco
+next_city: Fail
+
+
+f_limit:inf
+best:2103
+alternative:2290
+current_city:Seattle
+next_city:Santa Fe
+
+
+f_limit:2290
+best:2103
+alternative:3535
+current_city:Santa Fe
+next_city:Dallas
+
+
+Reached Dallas, which is the destination city
+Reached goal state
+Path to the goal from the initial state
+Seattle
+Santa Fe
+Dallas
+-----------------------
+
+
+
