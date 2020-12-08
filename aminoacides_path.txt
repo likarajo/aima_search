@@ -1,0 +1,104 @@
+Check consistency of the given heuristic.
+-----
+Parent city AM1 with heuristic 160
+Child city AM4 with heuristic 200
+Distance between these two cities: 350
+-----
+-----
+Parent city AM1 with heuristic 160
+Child city AM5 with heuristic 120
+Distance between these two cities: 40
+-----
+-----
+Parent city AM1 with heuristic 160
+Child city AM6 with heuristic 80
+Distance between these two cities: 70
+This is not consistent
+-----
+Heuristic is not consistent.
+
+A* algorithm
+
+Initial Node: AM1
+Iteration#1
+Current Node: AM1
+Evaluation function(AM1)=160
+Explored:
+['AM1']
+Frontier:
+[(AM6, 150), (AM5, 160), (AM4, 550)]
+Iteration#2
+Current Node: AM6
+Evaluation function(AM6)=150
+Explored:
+['AM1', 'AM6']
+Frontier:
+[(AM8, 130), (AM5, 160), (AM7, 430), (AM4, 550)]
+Iteration#3
+Current Node: AM8
+Evaluation function(AM8)=130
+Explored:
+['AM1', 'AM6', 'AM8']
+Frontier:
+[(AM2, 135), (AM5, 160), (AM9, 220), (AM7, 430), (AM4, 550)]
+Iteration#4
+Current Node: AM2
+Found the goal node
+Reached goal state
+Path to the goal from the initial state
+AM1
+AM6
+AM8
+AM2
+-----------------------
+
+None
+
+RBFS algorithm
+
+f_limit:inf
+best:160
+alternative:160
+current_city:AM1
+next_city:AM5
+
+
+f_limit:160
+best:190
+alternative:240
+current_city:AM5
+next_city: Fail
+
+
+f_limit:inf
+best:160
+alternative:190
+current_city:AM1
+next_city:AM6
+
+
+f_limit:190
+best:160
+alternative:300
+current_city:AM6
+next_city:AM8
+
+
+f_limit:190
+best:160
+alternative:190
+current_city:AM8
+next_city:AM2
+
+
+Reached Dallas, which is the destination city
+Reached goal state
+Path to the goal from the initial state
+AM1
+AM6
+AM8
+AM2
+-----------------------
+
+
+
